@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+}
+
+body {
+  background-color: hsl(231, 11%, 63%);
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#stepOne {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+  font-family: "Ubuntu-Bold";
+  border-color: hsl(0, 0%, 100%);
+}
+
+#arcade,
+#advanced,
+#pro {
+  cursor: pointer;
+  border-color: hsl(229, 24%, 87%);
+}
+
+.form-container {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(213, 96%, 18%);
+  width: 800px;
+  height: 570px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Ubuntu-Regular";
+}
+
+.form-content {
+  align-self: center;
+}
+
+.form-content label {
+  margin-bottom: 4px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 26px;
+}
+
+.form-input input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+
+.next-step-button {
+  align-self: end;
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  margin-top: 60px;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  color: hsl(0, 0%, 100%);
+  width: 400px;
+  height: 580px;
+}
+
+.sidebar-content {
+  padding: 16px;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.step-numbers {
+  border: 1px solid;
+  border-radius: 50%;
+  height: 6px;
+  width: 12px;
+  padding: 10px 10px 18px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.steps-info {
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.step-gray {
+  color: hsl(229, 24%, 87%);
+}
+.step-bold {
+  font-family: "Ubuntu-Bold";
+}
+
+.steps p {
+  margin: 0;
+}
+
+/* PLANS SECTION */
+.plans {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.plans-box {
+  border: 1px solid;
+  padding: 20px;
+}
