@@ -1,5 +1,11 @@
 const nextBtn = document.getElementById("nextBtn");
 const backBtn = document.getElementById("back");
+const toggleOn = document.querySelector(".fa-toggle-on");
+const toggleOff = document.querySelector(".fa-toggle-off");
+const hover = document.querySelectorAll(".plans-box");
+
+const monthly = document.getElementById("monthly");
+const yearly = document.getElementById("yearly");
 
 const info = document.getElementById("info");
 const planSelection = document.getElementById("planSelection");
@@ -28,37 +34,55 @@ nextBtn.addEventListener("click", (e) => {
   stepTwo.style.color = "black";
   stepTwo.style.fontFamily = "Ubuntu-Bold";
 });
+
 backBtn.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-// Arcade Box
-arcadeBox.addEventListener("click", () => {
-  arcadeBox.style.backgroundColor = "hsl(217, 100%, 97%)";
-  arcadeBox.style.borderColor = "hsl(243, 100%, 62%)";
+let boxClicked = false;
 
-  advancedBox.style.backgroundColor = "hsl(0, 0%, 100%)";
-  advancedBox.style.borderColor = "hsl(229, 24%, 87%)";
-  proBox.style.backgroundColor = "hsl(0, 0%, 100%)";
-  proBox.style.borderColor = "hsl(229, 24%, 87%)";
+//Plans box
+hover.forEach((box) => {
+  box.addEventListener("mouseover", (event) => {
+    if (!boxClicked) {
+      event.target.style.borderColor = "hsl(243, 100%, 62%)";
+    }
+  });
+
+  box.addEventListener("mouseout", (event) => {
+    if (!boxClicked) {
+      event.target.style.borderColor = "";
+    }
+  });
+
+  box.addEventListener("click", () => {
+    // Set the flag to true when a box is clicked
+    boxClicked = true;
+
+    // Set background and border color for the clicked box
+    box.style.backgroundColor = "hsl(217, 100%, 97%)";
+    box.style.borderColor = "hsl(243, 100%, 62%)";
+
+    // Reset styles for other boxes
+    hover.forEach((otherBox) => {
+      if (otherBox !== box) {
+        otherBox.style.backgroundColor = "hsl(0, 0%, 100%)";
+        otherBox.style.borderColor = "hsl(229, 24%, 87%)";
+      }
+    });
+  });
 });
-// Advanced Box
-advancedBox.addEventListener("click", () => {
-  advancedBox.style.backgroundColor = "hsl(217, 100%, 97%)";
-  advancedBox.style.borderColor = "hsl(243, 100%, 62%)";
 
-  arcadeBox.style.backgroundColor = "hsl(0, 0%, 100%)";
-  arcadeBox.style.borderColor = "hsl(229, 24%, 87%)";
-  proBox.style.backgroundColor = "hsl(0, 0%, 100%)";
-  proBox.style.borderColor = "hsl(229, 24%, 87%)";
+// Toggle time
+toggleOn.addEventListener("click", () => {
+  toggleOn.style.display = "none";
+  toggleOff.style.display = "block";
+  monthly.style.color = "hsl(213, 96%, 18%)";
+  yearly.style.color = "hsl(231, 11%, 63%)";
 });
-// Pro Box
-proBox.addEventListener("click", () => {
-  proBox.style.backgroundColor = "hsl(217, 100%, 97%)";
-  proBox.style.borderColor = "hsl(243, 100%, 62%)";
-
-  advancedBox.style.backgroundColor = "hsl(0, 0%, 100%)";
-  advancedBox.style.borderColor = "hsl(229, 24%, 87%)";
-  arcadeBox.style.backgroundColor = "hsl(0, 0%, 100%)";
-  arcadeBox.style.borderColor = "hsl(229, 24%, 87%)";
+toggleOff.addEventListener("click", () => {
+  toggleOff.style.display = "none";
+  toggleOn.style.display = "block";
+  monthly.style.color = "hsl(231, 11%, 63%)";
+  yearly.style.color = "hsl(213, 96%, 18%)";
 });

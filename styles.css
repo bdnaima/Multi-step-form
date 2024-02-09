@@ -26,11 +26,32 @@ form {
   border-color: hsl(0, 0%, 100%);
 }
 
+#planSelection {
+  align-self: center;
+}
 #arcade,
 #advanced,
 #pro {
   cursor: pointer;
   border-color: hsl(229, 24%, 87%);
+  font-family: "Ubuntu-Bold";
+}
+
+#yearly {
+  color: hsl(231, 11%, 63%);
+}
+
+#back {
+  cursor: pointer;
+  margin: 0;
+  align-self: center;
+  margin-top: 60px;
+  color: hsl(231, 11%, 63%);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-container {
@@ -127,10 +148,39 @@ form {
 /* PLANS SECTION */
 .plans {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 360px;
+}
+
+.plans p {
+  margin: 0;
 }
 
 .plans-box {
   border: 1px solid;
-  padding: 20px;
+  padding: 15px;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.plans-box img {
+  margin-bottom: 30px;
+}
+
+.time-choice-plan {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  border-radius: 20px;
+  font-family: "Ubuntu-Bold";
+  background-color: hsl(217, 100%, 97%);
+}
+
+.fa-solid {
+  align-self: center;
+  cursor: pointer;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
 }

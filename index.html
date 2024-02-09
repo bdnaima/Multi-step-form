@@ -16,6 +16,7 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="styles.css" />
+
     <style>
       .attribution {
         font-size: 11px;
@@ -118,14 +119,18 @@
           </div>
         </div>
 
-        <div>
-          <p>Monthly</p>
-          <p>Yearly</p>
+        <div class="time-choice-plan">
+          <p id="monthly">Monthly</p>
+          <i class="fa-solid fa-toggle-off"></i>
+          <i class="fa-solid fa-toggle-on" style="display: none"></i>
+          <p id="yearly">Yearly</p>
         </div>
 
         <div class="btns">
-          <button id="back" type="button">Go Back</button>
-          <button id="next" type="button">Next Step</button>
+          <p id="back">Go Back</p>
+          <button id="next" class="next-step-button" type="button">
+            Next Step
+          </button>
         </div>
       </div>
 
@@ -167,5 +172,9 @@
     </div>
 
     <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e8286fde48.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
